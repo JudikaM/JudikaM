@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 262" width="880" height="262" font-family="'Courier New', Courier, monospace">
+  <title>Judika Marpaung — Cyber Security &amp; Web3</title>
+  <desc>Animated Kali terminal banner. Typed prompt reveals the name JUDIKA MARPAUNG, roles, and the motto "Security isn't a feature — it's the foundation." The binary rain columns encode JUDIKA@M in ASCII.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#11091f"/>
+      <stop offset="1" stop-color="#0a0710"/>
+    </linearGradient>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d8b4fe"/>
+      <stop offset="0.5" stop-color="#bb86fc"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="bodyClip"><rect x="12" y="49" width="856" height="202" rx="2"/></clipPath>
+    <clipPath id="clipL1"><rect class="typeL1" x="28" y="68"  width="175" height="20"/></clipPath>
+    <clipPath id="clipL2"><rect class="typeL2" x="28" y="92"  width="120" height="20"/></clipPath>
+    <clipPath id="clipNm"><rect class="typeNm" x="28" y="118" width="338" height="38"/></clipPath>
+    <clipPath id="clipQt"><rect class="typeQt" x="28" y="218" width="474" height="22"/></clipPath>
+  </defs>
+
+  <style>
+    /* Typing always plays. Hidden states live ONLY inside keyframes (fill-mode both),
+       so a renderer without CSS animations still shows the complete static frame. */
+    .role{font-size:16px}
+    @media (max-width:520px){
+      .role{font-size:21px}
+    }
+    .typeL1,.typeL2,.typeNm,.typeQt{transform-box:fill-box;transform-origin:left center}
+    .typeL1{animation:grow .55s steps(17) .2s both}
+    .typeL2{animation:grow .4s steps(8) .95s both}
+    .typeNm{animation:grow .85s steps(15) 1.55s both}
+    .typeQt{animation:grow 1s steps(49) 3.35s both}
+    .f1{animation:fade .35s 2.6s both}
+    .f2{animation:fade .35s 2.95s both}
+    .cursor{animation:hold .01s linear 4.4s both, blink 1.05s steps(1) 4.4s infinite}
+    .col{animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+    .scan{animation:flick 3.5s ease-in-out infinite}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes fade{from{opacity:0}to{opacity:1}}
+    @keyframes hold{from{opacity:0}to{opacity:1}}
+    @keyframes blink{0%,50%{opacity:1}50.01%,100%{opacity:0}}
+    @keyframes fall{0%{transform:translateY(-90px);opacity:0}10%{opacity:.45}90%{opacity:.45}100%{transform:translateY(220px);opacity:0}}
+    @keyframes flick{0%,100%{opacity:.05}50%{opacity:.10}}
+  </style>
+
+  <!-- frame -->
+  <rect x="6" y="6" width="868" height="250" rx="16" fill="url(#bg)" stroke="#bb86fc" stroke-opacity="0.35" stroke-width="1.5"/>
+  <rect x="6" y="6" width="868" height="250" rx="16" fill="none" stroke="#7c3aed" stroke-opacity="0.18" stroke-width="4"/>
+
+  <!-- matrix code rain (behind text) — first 8 columns spell JUDIKA@M in ASCII -->
+  <g clip-path="url(#bodyClip)" fill="#8b5cf6" font-size="14" font-weight="bold">
+    <!-- J 01001010 -->
+    <text class="col" style="animation-duration:8.0s;animation-delay:1.3s" x="456" y="40"><tspan x="456" dy="0" fill-opacity="0.1">0</tspan><tspan x="456" dy="18" fill-opacity="0.2">1</tspan><tspan x="456" dy="18" fill-opacity="0.31">0</tspan><tspan x="456" dy="18" fill-opacity="0.42">0</tspan><tspan x="456" dy="18" fill-opacity="0.53">1</tspan><tspan x="456" dy="18" fill-opacity="0.64">0</tspan><tspan x="456" dy="18" fill-opacity="0.78">1</tspan><tspan x="456" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+    <!-- U 01010101 -->
+    <text class="col" style="animation-duration:5.3s;animation-delay:1.9s" x="496" y="40"><tspan x="496" dy="0" fill-opacity="0.1">0</tspan><tspan x="496" dy="18" fill-opacity="0.2">1</tspan><tspan x="496" dy="18" fill-opacity="0.31">0</tspan><tspan x="496" dy="18" fill-opacity="0.42">1</tspan><tspan x="496" dy="18" fill-opacity="0.53">0</tspan><tspan x="496" dy="18" fill-opacity="0.64">1</tspan><tspan x="496" dy="18" fill-opacity="0.78">0</tspan><tspan x="496" dy="18" fill="#e9d5ff" fill-opacity="1">1</tspan></text>
+    <!-- D 01000100 -->
+    <text class="col" style="animation-duration:7.7s;animation-delay:1.0s" x="536" y="40"><tspan x="536" dy="0" fill-opacity="0.1">0</tspan><tspan x="536" dy="18" fill-opacity="0.2">1</tspan><tspan x="536" dy="18" fill-opacity="0.31">0</tspan><tspan x="536" dy="18" fill-opacity="0.42">0</tspan><tspan x="536" dy="18" fill-opacity="0.53">0</tspan><tspan x="536" dy="18" fill-opacity="0.64">1</tspan><tspan x="536" dy="18" fill-opacity="0.78">0</tspan><tspan x="536" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+    <!-- I 01001001 -->
+    <text class="col" style="animation-duration:6.0s;animation-delay:1.1s" x="576" y="40"><tspan x="576" dy="0" fill-opacity="0.1">0</tspan><tspan x="576" dy="18" fill-opacity="0.2">1</tspan><tspan x="576" dy="18" fill-opacity="0.31">0</tspan><tspan x="576" dy="18" fill-opacity="0.42">0</tspan><tspan x="576" dy="18" fill-opacity="0.53">1</tspan><tspan x="576" dy="18" fill-opacity="0.64">0</tspan><tspan x="576" dy="18" fill-opacity="0.78">0</tspan><tspan x="576" dy="18" fill="#e9d5ff" fill-opacity="1">1</tspan></text>
+    <!-- K 01001011 -->
+    <text class="col" style="animation-duration:8.1s;animation-delay:0.4s" x="616" y="40"><tspan x="616" dy="0" fill-opacity="0.1">0</tspan><tspan x="616" dy="18" fill-opacity="0.2">1</tspan><tspan x="616" dy="18" fill-opacity="0.31">0</tspan><tspan x="616" dy="18" fill-opacity="0.42">0</tspan><tspan x="616" dy="18" fill-opacity="0.53">1</tspan><tspan x="616" dy="18" fill-opacity="0.64">0</tspan><tspan x="616" dy="18" fill-opacity="0.78">1</tspan><tspan x="616" dy="18" fill="#e9d5ff" fill-opacity="1">1</tspan></text>
+    <!-- A 01000001 -->
+    <text class="col" style="animation-duration:7.4s;animation-delay:0.2s" x="656" y="40"><tspan x="656" dy="0" fill-opacity="0.1">0</tspan><tspan x="656" dy="18" fill-opacity="0.2">1</tspan><tspan x="656" dy="18" fill-opacity="0.31">0</tspan><tspan x="656" dy="18" fill-opacity="0.42">0</tspan><tspan x="656" dy="18" fill-opacity="0.53">0</tspan><tspan x="656" dy="18" fill-opacity="0.64">0</tspan><tspan x="656" dy="18" fill-opacity="0.78">0</tspan><tspan x="656" dy="18" fill="#e9d5ff" fill-opacity="1">1</tspan></text>
+    <!-- @ 01000000 -->
+    <text class="col" style="animation-duration:5.0s;animation-delay:0.4s" x="696" y="40"><tspan x="696" dy="0" fill-opacity="0.1">0</tspan><tspan x="696" dy="18" fill-opacity="0.2">1</tspan><tspan x="696" dy="18" fill-opacity="0.31">0</tspan><tspan x="696" dy="18" fill-opacity="0.42">0</tspan><tspan x="696" dy="18" fill-opacity="0.53">0</tspan><tspan x="696" dy="18" fill-opacity="0.64">0</tspan><tspan x="696" dy="18" fill-opacity="0.78">0</tspan><tspan x="696" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+    <!-- M 01001101 -->
+    <text class="col" style="animation-duration:5.9s;animation-delay:0.9s" x="736" y="40"><tspan x="736" dy="0" fill-opacity="0.1">0</tspan><tspan x="736" dy="18" fill-opacity="0.2">1</tspan><tspan x="736" dy="18" fill-opacity="0.31">0</tspan><tspan x="736" dy="18" fill-opacity="0.42">0</tspan><tspan x="736" dy="18" fill-opacity="0.53">1</tspan><tspan x="736" dy="18" fill-opacity="0.64">1</tspan><tspan x="736" dy="18" fill-opacity="0.78">0</tspan><tspan x="736" dy="18" fill="#e9d5ff" fill-opacity="1">1</tspan></text>
+    <!-- filler noise columns -->
+    <text class="col" style="animation-duration:6.9s;animation-delay:0.0s" x="776" y="40"><tspan x="776" dy="0" fill-opacity="0.1">0</tspan><tspan x="776" dy="18" fill-opacity="0.2">1</tspan><tspan x="776" dy="18" fill-opacity="0.3">1</tspan><tspan x="776" dy="18" fill-opacity="0.39">0</tspan><tspan x="776" dy="18" fill-opacity="0.49">0</tspan><tspan x="776" dy="18" fill-opacity="0.59">1</tspan><tspan x="776" dy="18" fill-opacity="0.68">1</tspan><tspan x="776" dy="18" fill-opacity="0.78">1</tspan><tspan x="776" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+    <text class="col" style="animation-duration:8.0s;animation-delay:2.2s" x="816" y="40"><tspan x="816" dy="0" fill-opacity="0.1">0</tspan><tspan x="816" dy="18" fill-opacity="0.17">1</tspan><tspan x="816" dy="18" fill-opacity="0.24">1</tspan><tspan x="816" dy="18" fill-opacity="0.31">1</tspan><tspan x="816" dy="18" fill-opacity="0.38">1</tspan><tspan x="816" dy="18" fill-opacity="0.45">1</tspan><tspan x="816" dy="18" fill-opacity="0.53">0</tspan><tspan x="816" dy="18" fill-opacity="0.6">1</tspan><tspan x="816" dy="18" fill-opacity="0.67">1</tspan><tspan x="816" dy="18" fill-opacity="0.74">0</tspan><tspan x="816" dy="18" fill-opacity="0.81">0</tspan><tspan x="816" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+    <text class="col" style="animation-duration:6.1s;animation-delay:0.4s" x="852" y="40"><tspan x="852" dy="0" fill-opacity="0.1">0</tspan><tspan x="852" dy="18" fill-opacity="0.2">0</tspan><tspan x="852" dy="18" fill-opacity="0.3">0</tspan><tspan x="852" dy="18" fill-opacity="0.39">0</tspan><tspan x="852" dy="18" fill-opacity="0.49">0</tspan><tspan x="852" dy="18" fill-opacity="0.59">1</tspan><tspan x="852" dy="18" fill-opacity="0.68">0</tspan><tspan x="852" dy="18" fill-opacity="0.78">0</tspan><tspan x="852" dy="18" fill="#e9d5ff" fill-opacity="1">0</tspan></text>
+  </g>
+
+  <!-- window controls -->
+  <circle cx="34" cy="30" r="6" fill="#ff5f56"/>
+  <circle cx="56" cy="30" r="6" fill="#ffbd2e"/>
+  <circle cx="78" cy="30" r="6" fill="#27c93f"/>
+  <text x="440" y="35" text-anchor="middle" font-size="13" fill="#6e7681">judika@m: ~ — zsh</text>
+  <line x1="6" y1="49" x2="874" y2="49" stroke="#bb86fc" stroke-opacity="0.20"/>
+
+  <!-- Kali prompt line 1 (typed) -->
+  <g clip-path="url(#clipL1)" font-size="16">
+    <text x="30" y="82"><tspan fill="#a371f7">┌──(</tspan><tspan fill="#7ee787" font-weight="bold">judika@m</tspan><tspan fill="#a371f7">)-[</tspan><tspan fill="#c9d1d9">~</tspan><tspan fill="#a371f7">]</tspan></text>
+  </g>
+
+  <!-- Kali prompt line 2 + command (typed) -->
+  <g clip-path="url(#clipL2)" font-size="16">
+    <text x="30" y="106"><tspan fill="#a371f7">└─$</tspan><tspan fill="#e6edf3"> I am</tspan></text>
+  </g>
+
+  <!-- output: name (typed, glow; textLength pins width across font fallbacks) -->
+  <g clip-path="url(#clipNm)">
+    <text x="30" y="150" font-size="34" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
+  </g>
+
+  <!-- output: roles (appear like terminal output) -->
+  <text class="role f1" x="30" y="182" font-size="16"><tspan fill="#7ee787" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Informatics Engineering Student</tspan></text>
+  <text class="role f2" x="30" y="208" font-size="16"><tspan fill="#7ee787" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Cyber Security Enthusiast</tspan></text>
+
+  <!-- output: motto, typed as a shell comment -->
+  <g clip-path="url(#clipQt)">
+    <text x="30" y="234" font-size="16" fill="#8b949e" textLength="470" lengthAdjust="spacingAndGlyphs"># Security isn't a feature — it's the foundation.</text>
+  </g>
+
+  <!-- blinking cursor at the end of the last output line -->
+  <rect class="cursor" x="504" y="220" width="10" height="18" fill="#bb86fc"/>
+
+  <!-- scanline overlay -->
+  <g class="scan" clip-path="url(#bodyClip)" fill="#bb86fc" opacity="0.06">
+    <rect x="0" y="56"  width="880" height="1"/>
+    <rect x="0" y="64"  width="880" height="1"/>
+    <rect x="0" y="72"  width="880" height="1"/>
+    <rect x="0" y="80"  width="880" height="1"/>
+    <rect x="0" y="88"  width="880" height="1"/>
+    <rect x="0" y="96"  width="880" height="1"/>
+    <rect x="0" y="104" width="880" height="1"/>
+    <rect x="0" y="112" width="880" height="1"/>
+    <rect x="0" y="120" width="880" height="1"/>
+    <rect x="0" y="128" width="880" height="1"/>
+    <rect x="0" y="136" width="880" height="1"/>
+    <rect x="0" y="144" width="880" height="1"/>
+    <rect x="0" y="152" width="880" height="1"/>
+    <rect x="0" y="160" width="880" height="1"/>
+    <rect x="0" y="168" width="880" height="1"/>
+    <rect x="0" y="176" width="880" height="1"/>
+    <rect x="0" y="184" width="880" height="1"/>
+    <rect x="0" y="192" width="880" height="1"/>
+    <rect x="0" y="200" width="880" height="1"/>
+    <rect x="0" y="208" width="880" height="1"/>
+    <rect x="0" y="216" width="880" height="1"/>
+    <rect x="0" y="224" width="880" height="1"/>
+    <rect x="0" y="232" width="880" height="1"/>
+    <rect x="0" y="240" width="880" height="1"/>
+  </g>
+</svg>

@@ -87,7 +87,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
       <p>Focused on network security, secure programming, and software development in information technology.</p>
     </td>
     <td valign="top" width="50%">
-      <h3>SMK Penerbangan PBD Medan</h3>
+      <h3>PBD Aviation Vocational High School, Medan</h3>
       <p><b>Vocational — Electrical Avionic</b> &nbsp;·&nbsp; <code>2020 — 2023</code></p>
       <p>Specialized in aircraft electrical systems and avionics, building a strong technical foundation.</p>
     </td>

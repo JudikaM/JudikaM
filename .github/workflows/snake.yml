@@ -20,8 +20,28 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg?color_snake=%236d28d9&color_dots=%23ebedf0,%23c4b5fd,%23a78bfa,%238b5cf6,%236d28d9
             dist/github-snake-dark.svg?color_snake=%23bb86fc&color_dots=%23161b22,%233b2a63,%235b3fa0,%238b5cf6,%23bb86fc
+
+      - name: Frame the snake in the profile card design
+        run: |
+          python3 - <<'EOF'
+          import re
+          path = "dist/github-snake-dark.svg"
+          snake = open(path, encoding="utf-8").read()
+          w, h = map(int, re.search(r'<svg[^>]*? width="(\d+)" height="(\d+)"', snake).groups())
+          pad, top = 20, 46
+          W, H = w + 2 * pad, h + top + 10
+          font = "'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif"
+          inner = snake.replace("<svg ", '<svg x="%d" y="%d" ' % (pad, top), 1)
+          card = (
+              '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" fill="none">'
+              '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
+              '<text x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>'
+              '<text x="%d" y="37" text-anchor="end" font-family="%s" font-size="12" fill="#8B949E">last 12 months of contributions</text>'
+              "%s</svg>"
+          ) % (W, H, W, H, W - 1, H - 1, font, W - 28, font, inner)
+          open(path, "w", encoding="utf-8").write(card)
+          EOF
 
       - name: Push SVGs to the output branch
         uses: crazy-max/ghaction-github-pages@v4

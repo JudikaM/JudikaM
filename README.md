@@ -72,11 +72,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 
 <!-- ===== SNAKE ANIMATION ===== -->
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JudikaM/JudikaM/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/JudikaM/JudikaM/output/github-snake.svg" />
-    <img alt="snake animation" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/github-snake.svg" />
-  </picture>
+  <img width="98.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/github-snake-dark.svg" alt="Contribution snake animation"/>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>

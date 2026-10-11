@@ -112,7 +112,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
       <p align="center">A complete food-delivery app — Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard.</p>
     </td>
     <td width="33%" valign="top">
-      <h3 align="center">NakamotoX</h3>
+      <h3 align="center"><a href="https://github.com/JudikaM/kripto_simulator">NakamotoX</a></h3>
       <p align="center"><img src="https://skillicons.dev/icons?i=python,fastapi,docker&theme=dark" height="32" /></p>
       <p align="center">A microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations.</p>
     </td>

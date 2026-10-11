@@ -101,20 +101,38 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 
 <table>
   <tr>
-    <td width="33%" valign="top">
-      <h3 align="center">Younglings</h3>
-      <p align="center"><img src="https://skillicons.dev/icons?i=solidity,python&theme=dark" height="32" /></p>
-      <p align="center">A Solidity smart-contract auditing tool that detects reentrancy, integer overflow, and unauthorized-access vulnerabilities.</p>
+    <td width="33%" valign="top" align="center">
+      <br>
+      <a href="https://github.com/JudikaM/csv-tidy"><img src="https://skillicons.dev/icons?i=python,bash&theme=dark" height="44" alt="CSV Tidy tech stack" /></a>
+      <h3><a href="https://github.com/JudikaM/csv-tidy">CSV Tidy</a></h3>
+      <p><code>CLI</code> <code>Library</code> <code>Data Quality</code></p>
+      <p>A Python CLI and library that validates and cleans CSV files with explicit number and date formats. It never guesses what to repair.</p>
     </td>
-    <td width="33%" valign="top">
-      <h3 align="center"><a href="https://github.com/JudikaM/warungku-app">Warungku</a></h3>
-      <p align="center"><img src="https://skillicons.dev/icons?i=react,nodejs,firebase&theme=dark" height="32" /></p>
-      <p align="center">A complete food-delivery app — Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard.</p>
+    <td width="33%" valign="top" align="center">
+      <br>
+      <a href="https://github.com/JudikaM/warungku-app"><img src="https://skillicons.dev/icons?i=react,nodejs,firebase&theme=dark" height="44" alt="Warungku tech stack" /></a>
+      <h3><a href="https://github.com/JudikaM/warungku-app">Warungku</a></h3>
+      <p><code>Full-Stack</code> <code>Food Delivery</code> <code>Firebase</code></p>
+      <p>A complete food-delivery app — Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard.</p>
     </td>
-    <td width="33%" valign="top">
-      <h3 align="center"><a href="https://github.com/JudikaM/kripto_simulator">NakamotoX</a></h3>
-      <p align="center"><img src="https://skillicons.dev/icons?i=python,fastapi,docker&theme=dark" height="32" /></p>
-      <p align="center">A microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations.</p>
+    <td width="33%" valign="top" align="center">
+      <br>
+      <a href="https://github.com/JudikaM/kripto_simulator"><img src="https://skillicons.dev/icons?i=python,fastapi,docker&theme=dark" height="44" alt="NakamotoX tech stack" /></a>
+      <h3><a href="https://github.com/JudikaM/kripto_simulator">NakamotoX</a></h3>
+      <p><code>Cryptography</code> <code>Microservices</code></p>
+      <p>A microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/JudikaM/csv-tidy"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="CSV Tidy source code" /></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JudikaM/warungku-app"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="Warungku source code" /></a>
+      <a href="https://warungku-one.vercel.app"><img src="https://img.shields.io/badge/-Live%20Demo-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=vercel&logoColor=0D1117" alt="Warungku live demo" /></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/JudikaM/kripto_simulator"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="NakamotoX source code" /></a>
     </td>
   </tr>
 </table>

@@ -1,6 +1,6 @@
 <!-- ===== ANIMATED TERMINAL BANNER ===== -->
 <p align="center">
-  <a href="https://judikam.github.io/inijudika">
+  <a href="https://judika.me/">
     <img src="./assets/banner-v5.svg" alt="Judika Marpaung — Cyber Security & Web3" width="100%"/>
   </a>
 </p>
@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/judika-marpaung"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPgo=&logoColor=white" alt="LinkedIn"></a>
   <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="mailto:inijudika@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="mailto:judika.mrp@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://judikam.github.io/inijudika"><img src="https://img.shields.io/badge/Portfolio-bb86fc?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMCAxM2E1IDUgMCAwIDAgNy41NC41NGwzLTNhNSA1IDAgMCAwLTcuMDctNy4wN2wtMS43MiAxLjcxIi8+PHBhdGggZD0iTTE0IDExYTUgNSAwIDAgMC03LjU0LS41NGwtMyAzYTUgNSAwIDAgMCA3LjA3IDcuMDdsMS43MS0xLjcxIi8+PC9zdmc+Cg==&logoColor=white" alt="Portfolio"></a>
   <img src="https://komarev.com/ghpvc/?username=JudikaM&color=bb86fc&style=for-the-badge&label=Profile+Views" alt="Profile Views"/>
 </p>
@@ -24,7 +24,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 - Currently focused on **secure coding** & **smart contract auditing**
 - Exploring **Solidity**, **Web3**, and the **Ethereum** ecosystem
 - Open to **internships**, **freelance**, and **full-time** opportunities
-- Reach me at **inijudika@gmail.com**
+- Reach me at **judika.mrp@gmail.com**
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 
@@ -125,7 +125,12 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 ## GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=JudikaM&hide_border=true&background=0D1117&stroke=BB86FC&ring=BB86FC&fire=BB86FC&currStreakLabel=BB86FC&sideNums=C9D1D9&currStreakNum=C9D1D9&dates=8B949E&sideLabels=C9D1D9" alt="streak"/>
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=BB86FC&icon_color=BB86FC&text_color=C9D1D9" alt="stats"/>
+  <img height="170" src="https://streak-stats.demolab.com/?user=JudikaM&hide_border=true&background=0D1117&stroke=BB86FC&ring=BB86FC&fire=BB86FC&currStreakLabel=BB86FC&sideNums=C9D1D9&currStreakNum=C9D1D9&dates=8B949E&sideLabels=C9D1D9" alt="streak"/>
+</p>
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9&langs_count=8" alt="top languages"/>
 </p>
 
 <!-- ===== ACTIVITY GRAPH ===== -->

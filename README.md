@@ -123,18 +123,6 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
       <p>A microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations.</p>
     </td>
   </tr>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/JudikaM/csv-tidy"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="CSV Tidy source code" /></a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/JudikaM/warungku-app"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="Warungku source code" /></a>
-      <a href="https://warungku-one.vercel.app"><img src="https://img.shields.io/badge/-Live%20Demo-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=vercel&logoColor=0D1117" alt="Warungku live demo" /></a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/JudikaM/kripto_simulator"><img src="https://img.shields.io/badge/-Source-1a1025?style=for-the-badge&labelColor=bb86fc&color=1a1025&logo=github&logoColor=0D1117" alt="NakamotoX source code" /></a>
-    </td>
-  </tr>
 </table>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>

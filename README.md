@@ -79,72 +79,35 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 <!-- ===== EDUCATION ===== -->
 ## Education
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <h3>Perbanas Institute Jakarta</h3>
-      <p><b>B.Sc. Informatics Engineering</b> &nbsp;·&nbsp; <code>2023 — Present</code></p>
-      <p>Focused on network security, secure programming, and software development in information technology.</p>
-    </td>
-    <td valign="top" width="50%">
-      <h3>PBD Aviation Vocational High School, Medan</h3>
-      <p><b>Vocational — Electrical Avionic</b> &nbsp;·&nbsp; <code>2020 — 2023</code></p>
-      <p>Specialized in aircraft electrical systems and avionics, building a strong technical foundation.</p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img width="49%" src="./assets/education-perbanas.svg" alt="Perbanas Institute Jakarta — B.Sc. Informatics Engineering, 2023 — Present. Focused on network security, secure programming, and software development in information technology."/>
+  <img width="49%" src="./assets/education-pbd.svg" alt="PBD Aviation Vocational High School, Medan — Vocational, Electrical Avionic, 2020 — 2023. Specialized in aircraft electrical systems and avionics, building a strong technical foundation."/>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 
 <!-- ===== PROJECTS ===== -->
 ## Featured Projects
 
-<table>
-  <tr>
-    <td width="33%" valign="top" align="center">
-      <br>
-      <a href="https://github.com/JudikaM/csv-tidy"><img src="https://skillicons.dev/icons?i=python,bash&theme=dark" height="44" alt="CSV Tidy tech stack" /></a>
-      <h3><a href="https://github.com/JudikaM/csv-tidy">CSV Tidy</a></h3>
-      <p><code>CLI</code> <code>Library</code> <code>Data Quality</code></p>
-      <p>A Python CLI and library that validates and cleans CSV files with explicit number and date formats. It never guesses what to repair.</p>
-    </td>
-    <td width="33%" valign="top" align="center">
-      <br>
-      <a href="https://github.com/JudikaM/warungku-app"><img src="https://skillicons.dev/icons?i=react,nodejs,firebase&theme=dark" height="44" alt="Warungku tech stack" /></a>
-      <h3><a href="https://github.com/JudikaM/warungku-app">Warungku</a></h3>
-      <p><code>Full-Stack</code> <code>Food Delivery</code> <code>Firebase</code></p>
-      <p>A complete food-delivery app — Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard.</p>
-    </td>
-    <td width="33%" valign="top" align="center">
-      <br>
-      <a href="https://github.com/JudikaM/kripto_simulator"><img src="https://skillicons.dev/icons?i=python,fastapi,docker&theme=dark" height="44" alt="NakamotoX tech stack" /></a>
-      <h3><a href="https://github.com/JudikaM/kripto_simulator">NakamotoX</a></h3>
-      <p><code>Cryptography</code> <code>Microservices</code></p>
-      <p>A microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations.</p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/JudikaM/csv-tidy"><img width="32.5%" src="./assets/project-csv-tidy.svg" alt="CSV Tidy — a Python CLI and library that validates and cleans CSV files with explicit number and date formats."/></a>
+  <a href="https://github.com/JudikaM/warungku-app"><img width="32.5%" src="./assets/project-warungku.svg" alt="Warungku — a complete food-delivery app: Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard."/></a>
+  <a href="https://github.com/JudikaM/kripto_simulator"><img width="32.5%" src="./assets/project-nakamotox.svg" alt="NakamotoX — a microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations."/></a>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 
 <!-- ===== STATS ===== -->
 ## GitHub Stats
 
-<table>
-  <tr>
-    <td width="59%" align="center">
-      <img width="100%" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&card_width=495&icon_color=BB86FC&ring_color=BB86FC&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="stats"/>
-    </td>
-    <td width="41%" align="center">
-      <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&langs_count=8&card_width=326&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="top languages"/>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img width="100%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&hide_border=true&background=0D1117&stroke=3D444D&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D" alt="streak"/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img width="58.5%" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&card_width=495&icon_color=BB86FC&ring_color=BB86FC&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="stats"/>
+  <img width="39.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&langs_count=8&card_width=326&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="top languages"/>
+</p>
+
+<p align="center">
+  <img width="98.5%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&border_radius=10&border=BB86FC40&background=0,0D1117,1A1025,0D1117&stroke=BB86FC66&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D" alt="streak"/>
+</p>
 
 <!-- ===== SNAKE ANIMATION ===== -->
 <p align="center">

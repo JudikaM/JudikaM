@@ -21,10 +21,12 @@
 
 I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute Jakarta** with a deep interest in **cyber security**. I enjoy dissecting system vulnerabilities and building web applications that are secure from the ground up. That journey led me into **blockchain**, where I explore **smart contracts in the Ethereum ecosystem** and treat security not as a feature, but as the foundation. Right now I'm sharpening my **secure-coding** and **smart-contract auditing** skills.
 
-- Currently focused on **secure coding** & **smart contract auditing**
-- Exploring **Solidity**, **Web3**, and the **Ethereum** ecosystem
-- Open to **internships**, **freelance**, and **full-time** opportunities
-- Reach me at **judika.mrp@gmail.com**
+<p align="center">
+  <img width="24%" src="./assets/about-focus.svg" alt="Focus: secure coding & smart contract auditing"/>
+  <img width="24%" src="./assets/about-exploring.svg" alt="Exploring: Solidity, Web3, and the Ethereum ecosystem"/>
+  <img width="24%" src="./assets/about-open.svg" alt="Open to: internships, freelance, and full-time roles"/>
+  <a href="mailto:judika.mrp@gmail.com"><img width="24%" src="./assets/about-contact.svg" alt="Contact: judika.mrp@gmail.com"/></a>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 

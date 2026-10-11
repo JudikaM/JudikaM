@@ -133,11 +133,6 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9&langs_count=8" alt="top languages"/>
 </p>
 
-<!-- ===== ACTIVITY GRAPH ===== -->
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=JudikaM&bg_color=0D1117&color=BB86FC&line=BB86FC&point=FFFFFF&area=true&hide_border=true" alt="activity graph"/>
-</p>
-
 <!-- ===== SNAKE ANIMATION ===== -->
 <p align="center">
   <picture>

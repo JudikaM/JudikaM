@@ -31,48 +31,9 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 <!-- ===== SKILLS ===== -->
 ## Tech Arsenal
 
-<table align="center" border="0" cellpadding="10">
-  <tr>
-    <td align="right" width="150"><b>Languages</b></td>
-    <td align="center" width="78"><img src="https://skillicons.dev/icons?i=python&theme=dark" width="48" height="48" /><br><sub><b>Python</b></sub></td>
-    <td align="center" width="78"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="48" height="48" /><br><sub><b>JavaScript</b></sub></td>
-    <td align="center" width="78"><img src="https://skillicons.dev/icons?i=ts&theme=dark" width="48" height="48" /><br><sub><b>TypeScript</b></sub></td>
-    <td align="center" width="78"><img src="https://skillicons.dev/icons?i=solidity&theme=dark" width="48" height="48" /><br><sub><b>Solidity</b></sub></td>
-    <td align="center" width="78"><img src="https://skillicons.dev/icons?i=php&theme=dark" width="48" height="48" /><br><sub><b>PHP</b></sub></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Frontend</b></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="48" height="48" /><br><sub><b>React</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="48" height="48" /><br><sub><b>Tailwind</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=html&theme=dark" width="48" height="48" /><br><sub><b>HTML</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=css&theme=dark" width="48" height="48" /><br><sub><b>CSS</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=vite&theme=dark" width="48" height="48" /><br><sub><b>Vite</b></sub></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Backend</b></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" width="48" height="48" /><br><sub><b>Node.js</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=express&theme=dark" width="48" height="48" /><br><sub><b>Express</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=laravel&theme=dark" width="48" height="48" /><br><sub><b>Laravel</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=fastapi&theme=dark" width="48" height="48" /><br><sub><b>FastAPI</b></sub></td>
-    <td align="center"><img src="https://cdn.simpleicons.org/ethereum/9d7fbd" width="44" height="44" alt="Web3.py" /><br><sub><b>Web3.py</b></sub></td>
-  </tr>
-  <tr>
-    <td align="right"><b>DevOps &amp; Data</b></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="48" height="48" /><br><sub><b>Docker</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="48" height="48" /><br><sub><b>PostgreSQL</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="48" height="48" /><br><sub><b>MySQL</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" height="48" /><br><sub><b>Git</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="48" height="48" /><br><sub><b>GitHub</b></sub></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Security &amp; Systems</b></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=linux&theme=dark" width="48" height="48" /><br><sub><b>Linux</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=kali&theme=dark" width="48" height="48" /><br><sub><b>Kali</b></sub></td>
-    <td align="center"><img src="https://skillicons.dev/icons?i=bash&theme=dark" width="48" height="48" /><br><sub><b>Bash</b></sub></td>
-    <td align="center"><img src="https://cdn.simpleicons.org/burpsuite/FF6633" width="44" height="44" alt="Burp Suite" /><br><sub><b>Burp Suite</b></sub></td>
-    <td align="center"><img src="https://cdn.simpleicons.org/wireshark/1679A7" width="44" height="44" alt="Wireshark" /><br><sub><b>Wireshark</b></sub></td>
-  </tr>
-</table>
+<p align="center">
+  <img width="98.5%" src="./assets/tech-arsenal.svg" alt="Tech Arsenal — Languages: Python, JavaScript, TypeScript, Solidity, PHP. Frontend: React, Tailwind, HTML, CSS, Vite. Backend: Node.js, Express, Laravel, FastAPI, Web3.py. DevOps & Data: Docker, PostgreSQL, MySQL, Git, GitHub. Security & Systems: Linux, Kali, Bash, Burp Suite, Wireshark."/>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 

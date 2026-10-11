@@ -28,6 +28,17 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
 
+<!-- ===== PROJECTS ===== -->
+## Featured Projects
+
+<p align="center">
+  <a href="https://github.com/JudikaM/csv-tidy"><img width="32.5%" src="./assets/project-csv-tidy.svg" alt="CSV Tidy — a Python CLI and library that validates and cleans CSV files with explicit number and date formats."/></a>
+  <a href="https://github.com/JudikaM/warungku-app"><img width="32.5%" src="./assets/project-warungku.svg" alt="Warungku — a complete food-delivery app: Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard."/></a>
+  <a href="https://github.com/JudikaM/kripto_simulator"><img width="32.5%" src="./assets/project-nakamotox.svg" alt="NakamotoX — a microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations."/></a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+
 <!-- ===== SKILLS ===== -->
 ## Tech Arsenal
 
@@ -43,17 +54,6 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 <p align="center">
   <img width="49%" src="./assets/education-perbanas.svg" alt="Perbanas Institute Jakarta — B.Sc. Informatics Engineering, 2023 — Present. Focused on network security, secure programming, and software development in information technology."/>
   <img width="49%" src="./assets/education-pbd.svg" alt="PBD Aviation Vocational High School, Medan — Vocational, Electrical Avionic, 2020 — 2023. Specialized in aircraft electrical systems and avionics, building a strong technical foundation."/>
-</p>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
-
-<!-- ===== PROJECTS ===== -->
-## Featured Projects
-
-<p align="center">
-  <a href="https://github.com/JudikaM/csv-tidy"><img width="32.5%" src="./assets/project-csv-tidy.svg" alt="CSV Tidy — a Python CLI and library that validates and cleans CSV files with explicit number and date formats."/></a>
-  <a href="https://github.com/JudikaM/warungku-app"><img width="32.5%" src="./assets/project-warungku.svg" alt="Warungku — a complete food-delivery app: Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard."/></a>
-  <a href="https://github.com/JudikaM/kripto_simulator"><img width="32.5%" src="./assets/project-nakamotox.svg" alt="NakamotoX — a microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations."/></a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>

@@ -19,7 +19,7 @@
 <!-- ===== ABOUT ===== -->
 ## About Me
 
-I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute Jakarta** with a deep interest in **cyber security**. I enjoy dissecting system vulnerabilities and building web applications that are secure from the ground up. That journey led me into **blockchain**, where I explore **smart contracts in the Ethereum ecosystem** and treat security not as a feature, but as the foundation. Right now I'm sharpening my **secure-coding** and **smart-contract auditing** skills.
+I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute Jakarta** focused on **building secure web applications**. That goal is what drew me to **cyber security**: I study how systems break so I can build ones that don't. I treat security as the foundation of an application, not a feature added at the end.
 
 <p align="center">
   <img width="24%" src="./assets/about-focus.svg" alt="Focus: secure coding & smart contract auditing"/>

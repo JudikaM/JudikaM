@@ -130,14 +130,21 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 <!-- ===== STATS ===== -->
 ## GitHub Stats
 
-<p align="center">
-  <img width="58.5%" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&card_width=495&icon_color=BB86FC&ring_color=BB86FC&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="stats"/>
-  <img width="39.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&langs_count=8&card_width=326&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="top languages"/>
-</p>
-
-<p align="center">
-  <img width="98.5%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&border_radius=10&border=BB86FC40&background=0,0D1117,1A1025,0D1117&stroke=BB86FC66&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D" alt="streak"/>
-</p>
+<table>
+  <tr>
+    <td width="59%" align="center">
+      <img width="100%" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&card_width=495&icon_color=BB86FC&ring_color=BB86FC&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="stats"/>
+    </td>
+    <td width="41%" align="center">
+      <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&langs_count=8&card_width=326&hide_border=true&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="top languages"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img width="100%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&hide_border=true&background=0D1117&stroke=3D444D&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D" alt="streak"/>
+    </td>
+  </tr>
+</table>
 
 <!-- ===== SNAKE ANIMATION ===== -->
 <p align="center">

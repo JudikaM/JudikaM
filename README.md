@@ -130,7 +130,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 </p>
 
 <p align="center">
-  <img width="98.5%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&border_radius=10&border=BB86FC40&background=0D1117&stroke=BB86FC40&ring=BB86FC&fire=BB86FC&currStreakLabel=BB86FC&sideNums=C9D1D9&currStreakNum=C9D1D9&dates=8B949E&sideLabels=C9D1D9" alt="streak"/>
+  <img width="98.5%" src="https://streak-stats.demolab.com/?user=JudikaM&card_width=830&border_radius=10&border=BB86FC40&background=0,0D1117,1A1025,0D1117&stroke=BB86FC66&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D" alt="streak"/>
 </p>
 
 <!-- ===== SNAKE ANIMATION ===== -->

@@ -1,7 +1,7 @@
 <!-- ===== ANIMATED TERMINAL BANNER ===== -->
 <p align="center">
   <a href="https://judika.me/">
-    <img src="./assets/banner-v5.svg" alt="Judika Marpaung — Cyber Security & Web3" width="100%"/>
+    <img src="./assets/banner.svg" alt="Judika Marpaung — Cyber Security & Web3" width="100%"/>
   </a>
 </p>
 

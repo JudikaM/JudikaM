@@ -20,13 +20,13 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake-dark.svg?color_snake=%23bb86fc&color_dots=%23161b22,%233b2a63,%235b3fa0,%238b5cf6,%23bb86fc
+            dist/snake-card.svg?color_snake=%23bb86fc&color_dots=%23161b22,%233b2a63,%235b3fa0,%238b5cf6,%23bb86fc
 
       - name: Frame the snake in the profile card design
         run: |
           python3 - <<'EOF'
           import re
-          path = "dist/github-snake-dark.svg"
+          path = "dist/snake-card.svg"
           snake = open(path, encoding="utf-8").read()
           w, h = map(int, re.search(r'<svg[^>]*? width="(\d+)" height="(\d+)"', snake).groups())
           pad, top = 20, 46

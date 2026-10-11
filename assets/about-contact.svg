@@ -5,5 +5,5 @@
 <rect x="0.5" y="0.5" width="204" height="99" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>
 <text x="18" y="31" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" letter-spacing="1.4" fill="#8B949E">CONTACT</text>
 <text class="h" x="18" y="57">judika.mrp@gmail.com</text>
-<text class="p" x="18" y="79">email me anytime</text>
+<text class="p" x="18" y="79" style="fill:#BB86FC">email me anytime</text>
 </svg>

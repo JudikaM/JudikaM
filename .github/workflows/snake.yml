@@ -1,8 +1,8 @@
-name: Generate Snake Animation
+name: Generate Profile Cards
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
   push:
     branches:
@@ -42,6 +42,23 @@ jobs:
           ) % (W, H, W, H, W - 1, H - 1, font, W - 28, font, inner)
           open(path, "w", encoding="utf-8").write(card)
           EOF
+
+      # The public streak-stats server tells GitHub to cache its card for 24 hours,
+      # so the README serves this hourly copy from the output branch instead.
+      - name: Fetch the streak card
+        run: |
+          url='https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&timezone=Asia/Jakarta&card_width=830&border_radius=10&border=BB86FC40&background=0,0D1117,1A1025,0D1117&stroke=BB86FC66&ring=BB86FC&fire=D2A8FF&currStreakLabel=BB86FC&currStreakNum=F0F6FC&sideNums=BB86FC&sideLabels=C9D1D9&dates=8B949E&date_format=M%20j%5B%2C%20Y%5D'
+          for attempt in 1 2 3; do
+            # Error cards also come back as 200 SVGs, so check for the real labels.
+            if curl -sfL --max-time 30 "$url" -o streak.svg \
+              && grep -q 'Current Streak' streak.svg && grep -q 'Total Contributions' streak.svg; then
+              mv streak.svg dist/streak.svg
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::warning::streak-stats is unavailable, keeping the previous card"
+          curl -sfL "https://raw.githubusercontent.com/${{ github.repository }}/output/streak.svg" -o dist/streak.svg
 
       - name: Push SVGs to the output branch
         uses: crazy-max/ghaction-github-pages@v4

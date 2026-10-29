@@ -1,17 +1,13 @@
-<!-- ===== ANIMATED TERMINAL BANNER ===== -->
+<!-- ===== ANIMATED TERMINAL BANNER + SOCIAL LINKS ===== -->
+<!-- One paragraph, so the links sit right under the banner instead of a paragraph gap away. -->
 <p align="center">
-  <a href="https://judika.me/">
-    <img src="./assets/banner.svg" alt="Judika Marpaung — Cyber Security & Web3" width="100%"/>
-  </a>
-</p>
-
-<!-- ===== SOCIAL LINKS ===== -->
-<p align="center">
+  <a href="https://judika.me/"><img src="./assets/banner.svg" alt="Judika Marpaung — Cyber Security &amp; Web3" width="100%"/></a>
+  <br/>
   <a href="https://www.linkedin.com/in/judika-marpaung"><img src="./assets/link-linkedin.svg" alt="LinkedIn"/></a>
   <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt"><img src="./assets/link-instagram.svg" alt="Instagram"/></a>
   <a href="mailto:judika.mrp@gmail.com"><img src="./assets/link-gmail.svg" alt="Gmail"/></a>
   <a href="https://judika.me/"><img src="./assets/link-portfolio.svg" alt="Portfolio"/></a>
-  <img src="https://hits.sh/github.com/JudikaM.svg?style=for-the-badge&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views"/>
+  <img src="https://hits.sh/github.com/JudikaM.svg?style=for-the-badge&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views" height="34"/>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

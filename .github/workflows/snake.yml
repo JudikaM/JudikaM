@@ -180,7 +180,7 @@ jobs:
           snake = open("dist/snake.svg", encoding="utf-8").read()
           os.remove("dist/snake.svg")
           weeks = [datetime.date.fromisoformat(w["firstDay"]) for w in calendar["weeks"]]
-          X0, Y0 = 60, 96
+          X0, Y0 = 60, 102
           W, SH = X0 + 16 * len(weeks) + 24, Y0 + 112 + 46
           snake = re.sub(r'<rect class="u[^>]*/>', "", snake)  # the progress bar under the grid
           # Drop the bar's strip from the bottom of snk's viewBox and place the grid in the card.
@@ -206,9 +206,10 @@ jobs:
           body += tty % (W - 20, 20, ' class="full" text-anchor="end" fill="#BB86FC"', "bash / violet")
           body += tty % (22, 56, ' class="tp" fill="#C9D1D9"', prompt + "./snake --github " + user)
           for i, day in enumerate(weeks):
-              # Label each month where it starts, skipping a first month too narrow to fit.
+              # Label each month where it starts, skipping a first month too narrow to fit. The
+              # labels sit above the lane just over the grid, where the snake enters each loop.
               if (i == 0 and weeks[min(2, len(weeks) - 1)].month == day.month) or (i and weeks[i - 1].month != day.month):
-                  body += label % (X0 + 2 + 16 * i, Y0 - 10, "", day.strftime("%b"))
+                  body += label % (X0 + 2 + 16 * i, Y0 - 20, "", day.strftime("%b"))
           for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
               body += label % (X0 - 10, Y0 + 12 + 16 * row, ' text-anchor="end"', name)
           foot = Y0 + 112 + 26

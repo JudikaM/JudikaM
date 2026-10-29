@@ -30,15 +30,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 - <<'EOF'
-          import json, os, urllib.request
+          import datetime, json, os, urllib.request
           from xml.sax.saxutils import escape
 
           user = os.environ["GH_USER"]
           query = """query($login: String!) {
             user(login: $login) {
-              pullRequests { totalCount }
-              issues { totalCount }
-              contributionsCollection { totalCommitContributions contributionCalendar { totalContributions weeks { firstDay } } }
+              contributionsCollection {
+                totalCommitContributions totalPullRequestContributions totalIssueContributions
+                contributionCalendar { totalContributions weeks { firstDay contributionDays { date contributionCount } } }
+              }
               repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100) {
                 totalCount
                 nodes { stargazerCount languages(first: 20) { edges { size node { name color } } } }
@@ -54,7 +55,8 @@ jobs:
           repos = data["repositories"]["nodes"]
 
           font = "'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif"
-          H = 194
+          H = 230
+          text = '<text x="%g" y="%g" font-family="' + font + '" font-size="%d"%s>%s</text>'
 
           def card(w, title, body):
               return (
@@ -63,25 +65,58 @@ jobs:
                   '<text x="25" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">%s</text>%s</svg>'
               ) % (w, H, w, H, w - 1, H - 1, font, title, body)
 
-          # Stats: a 3x2 grid of numbers, each one a live count from the GraphQL API.
-          tiles = [
-              (data["contributionsCollection"]["contributionCalendar"]["totalContributions"], "Contributions, past year"),
-              (data["contributionsCollection"]["totalCommitContributions"], "Commits, past year"),
-              (data["pullRequests"]["totalCount"], "Pull requests"),
-              (data["issues"]["totalCount"], "Issues"),
-              (sum(r["stargazerCount"] for r in repos), "Stars earned"),
-              (data["repositories"]["totalCount"], "Public repos"),
-          ]
-          body = '<path d="M25 56H470" stroke="#BB86FC" stroke-opacity="0.12"/>'
-          for i, (n, label) in enumerate(tiles):
-              x, y = 25 + 155 * (i % 3), 98 + 56 * (i // 3)
-              body += (
-                  '<text x="%d" y="%d" font-family="%s" font-size="26" font-weight="600" fill="#F0F6FC">%d</text>'
-                  '<text x="%d" y="%d" font-family="%s" font-size="12" fill="#8B949E">%s</text>'
-              ) % (x, y, font, n, x, y + 18, font, label)
+          # Activity: past-year totals, the commit/PR/issue mix, and contributions per month.
+          # The mix colors pass the dataviz palette checks on the #0D1117 surface.
+          col = data["contributionsCollection"]
+          calendar = col["contributionCalendar"]
+          mix = [(col["totalCommitContributions"], "Commits", "#9E6CF0"),
+                 (col["totalPullRequestContributions"], "Pull requests", "#C27F22"),
+                 (col["totalIssueContributions"], "Issues", "#2FA59A")]
+          stars = sum(r["stargazerCount"] for r in repos)
+          body = text % (470, 37, 12, ' text-anchor="end" fill="#8B949E"',
+                         "&#9733; %d stars &#183; %d public repos" % (stars, data["repositories"]["totalCount"]))
+          body += '<path d="M25 52H470" stroke="#BB86FC" stroke-opacity="0.12"/>'
+          for i, (n, label, color) in enumerate([(calendar["totalContributions"], "Contributions", None)] + mix):
+              x = 25 + 114 * i
+              body += text % (x, 84, 22, ' font-weight="600" fill="#F0F6FC"', n)
+              if color:
+                  body += '<rect x="%d" y="91" width="8" height="8" rx="2" fill="%s"/>' % (x, color)
+              body += text % (x + (12 if color else 0), 99, 11, ' fill="#8B949E"', label)
+          # One stacked bar for the mix, 2px surface gaps between segments.
+          parts = [m for m in mix if m[0]]
+          span = 445 - 2 * (len(parts) - 1)
+          x, mixsum = 25.0, sum(m[0] for m in parts)
+          for n, _, color in parts:
+              w = span * n / mixsum
+              body += '<rect x="%.2f" y="110" width="%.2f" height="6" rx="3" fill="%s"/>' % (x, w, color)
+              x += w + 2
+          # Running total of contributions across the calendar, as a line over a soft area.
+          days = sorted((d["date"], d["contributionCount"]) for wk in calendar["weeks"] for d in wk["contributionDays"])
+          # Start at the month of the first contribution so months of zeros don't flatten the curve.
+          first = next((d for d, n in days if n), days[0][0])[:7] + "-01"
+          days = [(d, n) for d, n in days if d >= first] if first > days[0][0] else days
+          base, tall, run, pts = 200, 52, 0, []
+          for i, (_, n) in enumerate(days):
+              run += n
+              pts.append((25 + 445 * i / (len(days) - 1), base - tall * run / max(calendar["totalContributions"], 1)))
+          line = " ".join("%.1f %.1f" % p for p in pts)
+          body += text % (25, 136, 11, ' fill="#8B949E"', "Running total since " + datetime.date.fromisoformat(days[0][0]).strftime("%b %Y"))
+          body += ('<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#BB86FC" stop-opacity="0.28"/>'
+                   '<stop offset="1" stop-color="#BB86FC" stop-opacity="0"/></linearGradient>')
+          body += '<path d="M25 %d L%s L470 %d Z" fill="url(#fade)"/>' % (base, line, base)
+          body += '<path d="M25 %dH470" stroke="#8B949E" stroke-opacity="0.35"/>' % base
+          body += '<path d="M%s" stroke="#BB86FC" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' % line
+          ex, ey = pts[-1]
+          body += '<circle cx="%.1f" cy="%.1f" r="4" fill="#BB86FC" stroke="#0D1117" stroke-width="2"/>' % (ex, ey)
+          body += text % (ex - 8, ey + 4, 11, ' text-anchor="end" font-weight="600" fill="#F0F6FC"', calendar["totalContributions"])
+          for i, (d, _) in enumerate(days):
+              if d.endswith("-01") and 25 + 445 * i / (len(days) - 1) < 455:
+                  body += text % (25 + 445 * i / (len(days) - 1), base + 16, 10, ' fill="#8B949E"',
+                                  datetime.date.fromisoformat(d).strftime("%b"))
           open("dist/stats.svg", "w", encoding="utf-8").write(card(495, "Activity", body))
 
-          # Languages: Blade templates and build files would crowd out the real languages.
+          # Languages: one bar per language, scaled to the largest. Blade templates and build files would
+          # crowd out the real languages.
           skip = {"Blade", "Dockerfile", "Shell", "Makefile", "Procfile"}
           sizes, colors = {}, {}
           for r in repos:
@@ -92,26 +127,18 @@ jobs:
                       colors[name] = e["node"]["color"] or "#8B949E"
           total = sum(sizes.values())
           top = sorted(sizes.items(), key=lambda kv: -kv[1])[:6]
-          shown = sum(s for _, s in top)
-          body, x = '<clipPath id="bar"><rect x="25" y="58" width="284" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">', 25.0
-          for name, size in top:
-              w = 284 * size / shown
-              body += '<rect x="%.2f" y="58" width="%.2f" height="8" fill="%s"/>' % (x, w + 0.5, colors[name])
-              x += w
-          body += "</g>"
+          body = '<path d="M25 52H309" stroke="#BB86FC" stroke-opacity="0.12"/>'
           for i, (name, size) in enumerate(top):
-              x, y = 25 + 150 * (i % 2), 100 + 28 * (i // 2)
-              body += (
-                  '<circle cx="%d" cy="%d" r="5" fill="%s"/>'
-                  '<text x="%d" y="%d" font-family="%s" font-size="12" fill="#C9D1D9">%s <tspan fill="#8B949E">%.1f%%</tspan></text>'
-              ) % (x + 5, y - 4, colors[name], x + 16, y, font, escape(name), 100 * size / total)
+              y, share = 80 + 25 * i, size / total
+              body += text % (25, y, 12, ' fill="#C9D1D9"', escape(name))
+              body += '<rect x="108" y="%d" width="%.2f" height="8" rx="4" fill="%s"/>' % (y - 8, max(150 * share / (top[0][1] / total), 8), colors[name])
+              body += text % (309, y, 12, ' text-anchor="end" fill="#8B949E"', "%.1f%%" % (100 * share))
           open("dist/languages.svg", "w", encoding="utf-8").write(card(334, "Most Used Languages", body))
 
           # Snake: frame the snk grid with GitHub-style month and weekday labels, a live
           # total and a legend. Grid cell (col, row) sits at (16 col + 2, 16 row + 2) in snk's
           # coordinates, and its viewBox starts at (-16, -32).
-          import datetime, re
-          calendar = data["contributionsCollection"]["contributionCalendar"]
+          import re
           snake = open("dist/snake.svg", encoding="utf-8").read()
           os.remove("dist/snake.svg")
           weeks = [datetime.date.fromisoformat(w["firstDay"]) for w in calendar["weeks"]]
@@ -147,7 +174,7 @@ jobs:
               '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
               '<text x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>%s%s</svg>'
               % (W, SH, W, SH, W - 1, SH - 1, font, body, snake))
-          print(tiles, [(n, round(100 * s / total, 1)) for n, s in top])
+          print([m[:2] for m in mix], [(n, round(100 * s / total, 1)) for n, s in top])
           EOF
 
       - name: Push SVGs to the output branch

@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 - <<'EOF'
-          import datetime, json, os, urllib.request
+          import datetime, json, os, urllib.error, urllib.request
           from xml.sax.saxutils import escape
 
           user = os.environ["GH_USER"]
@@ -79,6 +79,34 @@ jobs:
               ) % (w, H, w, H, w - 1, H - 1, w - 21, w - 1, shared,
                    tty % (w / 2, 20, ' text-anchor="middle" fill="#9DA7B3"', "judika@m: ~"),
                    tty % (22, 54, ' fill="#C9D1D9"', prompt + command), full, mini, narrow)
+
+          # Views: a button drawn like the README's link buttons. hits.sh counts every fetch
+          # of its badge, this one included, so the count drops the workflow's own fetches,
+          # carried between runs in views-runs.txt on the output branch.
+          import re
+          hits = urllib.request.urlopen("https://hits.sh/github.com/%s.svg?extraCount=381" % user, timeout=30).read().decode()
+          total = int(re.findall(r">(\d+)</text>", hits)[-1])
+          try:
+              ran = urllib.request.urlopen(urllib.request.Request(
+                  "https://api.github.com/repos/%s/%s/contents/views-runs.txt?ref=output" % (user, user),
+                  headers={"Authorization": "bearer " + os.environ["GITHUB_TOKEN"], "Accept": "application/vnd.github.raw"}),
+                  timeout=30).read()
+              runs = int(ran) + 1
+          except urllib.error.HTTPError as e:
+              if e.code != 404:
+                  raise
+              runs = 5  # the first run, plus four fetches made while testing this card
+          open("dist/views-runs.txt", "w").write(str(runs))
+          label = "%d views" % (total - runs)
+          text_w = len(label) * 8.4
+          bw = round(12 + 17 + 9 + text_w + 14)
+          open("dist/views.svg", "w", encoding="utf-8").write(
+              '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="34" viewBox="0 0 %d 34" fill="none" role="img" aria-label="%s">'
+              '<rect x="0.5" y="0.5" width="%d" height="33" rx="7" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.45"/>'
+              '<g transform="translate(12 8.5) scale(0.7083)" stroke="#BB86FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+              '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></g>'
+              '<text x="38" y="22" font-family="%s" font-size="14" fill="#E6EDF3" textLength="%.1f" lengthAdjust="spacingAndGlyphs">%s</text></svg>'
+              % (bw, bw, label, bw - 1, mono, text_w, label))
 
           # Activity: a fastfetch run, with the stats as its info lines and a weekly
           # sparkline drawn as bars.
@@ -176,7 +204,6 @@ jobs:
           # Snake: frame the snk grid with GitHub-style month and weekday labels, a live
           # total and a legend. Grid cell (col, row) sits at (16 col + 2, 16 row + 2) in snk's
           # coordinates, and its viewBox starts at (-16, -32).
-          import re
           snake = open("dist/snake.svg", encoding="utf-8").read()
           os.remove("dist/snake.svg")
           weeks = [datetime.date.fromisoformat(w["firstDay"]) for w in calendar["weeks"]]

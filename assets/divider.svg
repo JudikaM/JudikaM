@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="6" viewBox="0 0 1000 6" preserveAspectRatio="none">
 <defs>
-<linearGradient id="g"><stop stop-color="#121212"/><stop offset=".5" stop-color="#BB86FC"/><stop offset="1" stop-color="#121212"/></linearGradient>
 <linearGradient id="p"><stop stop-color="#E9D5FF" stop-opacity="0"/><stop offset=".5" stop-color="#F3E8FF"/><stop offset="1" stop-color="#E9D5FF" stop-opacity="0"/></linearGradient>
 <linearGradient id="h"><stop stop-color="#BB86FC" stop-opacity="0"/><stop offset=".5" stop-color="#BB86FC" stop-opacity=".45"/><stop offset="1" stop-color="#BB86FC" stop-opacity="0"/></linearGradient>
 </defs>
-<rect y="2" width="1000" height="2" fill="url(#g)"/>
+<!-- A solid dark purple bar, so the passing light stands out along its whole length. -->
+<rect y="2" width="1000" height="2" fill="#4B2E83"/>
 <!-- A pulse of light runs along the line, then rests; it waits off the left edge when nothing animates. -->
 <g class="pulse"><rect x="-180" width="180" height="6" fill="url(#h)"/><rect x="-180" y="2" width="180" height="2" fill="url(#p)"/></g>
 <style>.pulse{animation:run 6s cubic-bezier(.45,0,.55,1) infinite}@keyframes run{0%{transform:translateX(0)}70%,100%{transform:translateX(1360px)}}</style>

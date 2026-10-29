@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="213" height="100" viewBox="-4 0 213 100" fill="none" role="img" aria-labelledby="t d">
-<title id="t">Focus</title>
-<desc id="d">Secure coding, web application security</desc>
-<rect x="0.5" y="0.5" width="204" height="99" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>
-<g fill="none" stroke="#BB86FC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(167 15) scale(0.75)"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></g>
-<g class="full"><text x="18" y="31" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" letter-spacing="1.4" fill="#8B949E">FOCUS</text><text x="18" y="58" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#BB86FC">Secure coding</text><text x="18" y="79" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" fill="#8B949E">web application security</text></g><g class="mini"><text x="18" y="38" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="17" letter-spacing="1.5" fill="#8B949E">FOCUS</text><text x="18" y="76" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" fill="#BB86FC" font-weight="700">AppSec</text></g><style>.mini{display:none}@media (max-width:140px){.full{display:none}.mini{display:inline}}</style>
-</svg>

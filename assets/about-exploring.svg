@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="213" height="100" viewBox="-4 0 213 100" fill="none" role="img" aria-labelledby="t d">
-<title id="t">Exploring</title>
-<desc id="d">Web pentesting, Burp Suite &amp; OWASP Top 10</desc>
-<rect x="0.5" y="0.5" width="204" height="99" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>
-<g fill="none" stroke="#BB86FC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(167 15) scale(0.75)"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></g>
-<g class="full"><text x="18" y="31" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" letter-spacing="1.4" fill="#8B949E">EXPLORING</text><text x="18" y="58" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#BB86FC">Web pentesting</text><text x="18" y="79" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" fill="#8B949E">Burp Suite &amp; OWASP Top 10</text></g><g class="mini"><text x="18" y="38" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="17" letter-spacing="1.5" fill="#8B949E">EXPLORING</text><text x="18" y="76" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" fill="#BB86FC" font-weight="700">Pentesting</text></g><style>.mini{display:none}@media (max-width:140px){.full{display:none}.mini{display:inline}}</style>
-</svg>

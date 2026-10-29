@@ -56,7 +56,6 @@ jobs:
           data = json.load(urllib.request.urlopen(req, timeout=30))["data"]["user"]
           repos = data["repositories"]["nodes"]
 
-          font = "'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Arial,sans-serif"
           # Both cards are terminal windows on the banner's judika@m host: traffic lights,
           # a title, and the prompt running the command whose output the card shows.
           H = 230
@@ -181,7 +180,7 @@ jobs:
           snake = open("dist/snake.svg", encoding="utf-8").read()
           os.remove("dist/snake.svg")
           weeks = [datetime.date.fromisoformat(w["firstDay"]) for w in calendar["weeks"]]
-          X0, Y0 = 60, 84
+          X0, Y0 = 60, 96
           W, SH = X0 + 16 * len(weeks) + 24, Y0 + 112 + 46
           snake = re.sub(r'<rect class="u[^>]*/>', "", snake)  # the progress bar under the grid
           # Drop the bar's strip from the bottom of snk's viewBox and place the grid in the card.
@@ -193,28 +192,34 @@ jobs:
           snake = snake.replace("</svg>", "<style>.s{filter:drop-shadow(0 0 3px #BB86FC99)}"
                                 ".s0{fill:#E9D5FF}.s1{fill:#BB86FC}.s2{fill:#9D6CF0}.s3{fill:#7C4DDB}</style></svg>", 1)
           dots = ["#1C1A2B", "#3B2A63", "#5B3FA0", "#8B5CF6", "#BB86FC"]
-          label = '<text class="lb" x="%d" y="%d" font-family="%s" font-size="11" fill="#8B949E"%s>%s</text>'
-          # On a phone the card draws at about 0.4x, so labels grow and the legend goes.
-          body = ("<style>@media (max-width:600px){.lb{font-size:22px}.tt{font-size:34px}"
-                  ".lg{display:none}}</style>")
+          # A terminal running ./snake: the cards' title bar without traffic lights, a theme
+          # tag on the right, then the prompt. Labels are mono like the rest of the output.
+          label = '<text class="lb" x="%d" y="%d" font-family="' + mono + '" font-size="11" fill="#8B949E"%s>%s</text>'
+          # On a phone the card draws at about 0.4x, so labels grow and the bar text and legend go.
+          body = ("<style>@media (max-width:600px){.lb{font-size:22px}.tp{font-size:22px}"
+                  ".lg,.full{display:none}}</style>")
+          body += ('<path d="M0.5 30.5V10.5a10 10 0 0 1 10-10h%d a10 10 0 0 1 10 10v20Z" fill="#BB86FC" fill-opacity="0.06"/>'
+                   '<path d="M1 30.5H%d" stroke="#BB86FC" stroke-opacity="0.18"/>' % (W - 21, W - 1))
+          body += tty % (20, 20, ' class="full" fill="#8B949E"', "judika@m: ~/contributions")
+          body += tty % (W - 20, 20, ' class="full" text-anchor="end" fill="#BB86FC"', "bash / violet")
+          body += tty % (22, 56, ' class="tp" fill="#C9D1D9"', prompt + "./snake --github " + user)
           for i, day in enumerate(weeks):
               # Label each month where it starts, skipping a first month too narrow to fit.
               if (i == 0 and weeks[min(2, len(weeks) - 1)].month == day.month) or (i and weeks[i - 1].month != day.month):
-                  body += label % (X0 + 2 + 16 * i, Y0 - 10, font, "", day.strftime("%b"))
+                  body += label % (X0 + 2 + 16 * i, Y0 - 10, "", day.strftime("%b"))
           for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-              body += label % (X0 - 10, Y0 + 12 + 16 * row, font, ' text-anchor="end"', name)
+              body += label % (X0 - 10, Y0 + 12 + 16 * row, ' text-anchor="end"', name)
           foot = Y0 + 112 + 26
-          body += label % (X0 + 2, foot, font, "", "%d contributions in the last year" % calendar["totalContributions"])
+          body += label % (X0 + 2, foot, "", "%d contributions in the last year" % calendar["totalContributions"])
           x = W - 26 - 28 - 5 * 14
-          body += '<g class="lg">' + label % (x - 6, foot, font, ' text-anchor="end"', "Less")
+          body += '<g class="lg">' + label % (x - 6, foot, ' text-anchor="end"', "Less")
           for i, c in enumerate(dots):
               body += '<rect x="%d" y="%d" width="10" height="10" rx="2" fill="%s"/>' % (x + 14 * i, foot - 9, c)
-          body += label % (x + 5 * 14 + 2, foot, font, "", "More") + "</g>"
+          body += label % (x + 5 * 14 + 2, foot, "", "More") + "</g>"
           open("dist/snake-card.svg", "w", encoding="utf-8").write(
               '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" fill="none">'
-              '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
-              '<text class="tt" x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>%s%s</svg>'
-              % (W, SH, W, SH, W - 1, SH - 1, font, body, snake))
+              '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>%s%s</svg>'
+              % (W, SH, W, SH, W - 1, SH - 1, body, snake))
           print(info, weekly, [(n, round(100 * s / total, 1)) for n, s in top])
           EOF
 

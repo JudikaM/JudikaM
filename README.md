@@ -3,11 +3,11 @@
 <p align="center">
   <a href="https://judika.me/"><img src="./assets/banner.svg" alt="Judika Marpaung — Cyber Security &amp; Web3" width="100%"/></a>
   <br/>
-  <a href="https://www.linkedin.com/in/judika-marpaung"><img src="./assets/link-linkedin.svg" alt="LinkedIn"/></a>
-  <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt"><img src="./assets/link-instagram.svg" alt="Instagram"/></a>
-  <a href="mailto:judika.mrp@gmail.com"><img src="./assets/link-gmail.svg" alt="Gmail"/></a>
-  <a href="https://judika.me/"><img src="./assets/link-portfolio.svg" alt="Portfolio"/></a>
-  <img src="https://hits.sh/github.com/JudikaM.svg?style=for-the-badge&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views" height="34"/>
+  <a href="https://www.linkedin.com/in/judika-marpaung"><img src="./assets/link-linkedin.svg" alt="LinkedIn" align="absmiddle"/></a>
+  <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt"><img src="./assets/link-instagram.svg" alt="Instagram" align="absmiddle"/></a>
+  <a href="mailto:judika.mrp@gmail.com"><img src="./assets/link-gmail.svg" alt="Gmail" align="absmiddle"/></a>
+  <a href="https://judika.me/"><img src="./assets/link-portfolio.svg" alt="Portfolio" align="absmiddle"/></a>
+  <kbd><img src="https://hits.sh/github.com/JudikaM.svg?style=flat-square&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views" height="24"/></kbd>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

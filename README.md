@@ -36,7 +36,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 <p align="center">
   <a href="https://github.com/JudikaM/csv-tidy"><img width="32.5%" src="./assets/project-csv-tidy.svg" alt="CSV Tidy — a Python CLI and library that validates and cleans CSV files with explicit number and date formats."/></a>
   <a href="https://github.com/JudikaM/warungku-app"><img width="32.5%" src="./assets/project-warungku.svg" alt="Warungku — a complete food-delivery app: Node.js & Express backend on Firebase, with React + Vite customer frontend and admin dashboard."/></a>
-  <a href="https://github.com/JudikaM/kripto_simulator"><img width="32.5%" src="./assets/project-nakamotox.svg" alt="NakamotoX — a microservices education app visualizing ChaCha20 & Caesar Cipher encryption in real-time, down to bitwise (ARX) operations."/></a>
+  <a href="https://github.com/JudikaM/lobbyquest"><img width="32.5%" src="./assets/project-lobbyquest.svg" alt="LobbyQuest — an open-source web app for planning game nights and hangouts with friends: create an agenda and vote on the best time."/></a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>

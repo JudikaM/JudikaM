@@ -67,3 +67,8 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <img width="58.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/stats.svg" alt="GitHub activity: contributions, commits, pull requests, issues, stars and public repositories"/>
   <img width="39.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/languages.svg" alt="Most used languages"/>
 </p>
+
+<!-- ===== SNAKE ANIMATION ===== -->
+<p align="center">
+  <img width="98.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/snake-card.svg" alt="Contribution snake eating the last 12 months of contributions"/>
+</p>

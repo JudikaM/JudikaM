@@ -15,14 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Generate the snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=%23bb86fc&color_dots=%231c1a2b,%233b2a63,%235b3fa0,%238b5cf6,%23bb86fc
+
       # The public github-readme-stats server is paused, so the cards are drawn here
       # from the GraphQL API and served from the output branch.
-      - name: Draw the stats and languages cards
+      - name: Draw the stats, languages and snake cards
         env:
           GH_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p dist
           python3 - <<'EOF'
           import json, os, urllib.request
           from xml.sax.saxutils import escape
@@ -32,7 +38,7 @@ jobs:
             user(login: $login) {
               pullRequests { totalCount }
               issues { totalCount }
-              contributionsCollection { totalCommitContributions contributionCalendar { totalContributions } }
+              contributionsCollection { totalCommitContributions contributionCalendar { totalContributions weeks { firstDay } } }
               repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100) {
                 totalCount
                 nodes { stargazerCount languages(first: 20) { edges { size node { name color } } } }
@@ -100,6 +106,47 @@ jobs:
                   '<text x="%d" y="%d" font-family="%s" font-size="12" fill="#C9D1D9">%s <tspan fill="#8B949E">%.1f%%</tspan></text>'
               ) % (x + 5, y - 4, colors[name], x + 16, y, font, escape(name), 100 * size / total)
           open("dist/languages.svg", "w", encoding="utf-8").write(card(334, "Most Used Languages", body))
+
+          # Snake: frame the snk grid with GitHub-style month and weekday labels, a live
+          # total and a legend. Grid cell (col, row) sits at (16 col + 2, 16 row + 2) in snk's
+          # coordinates, and its viewBox starts at (-16, -32).
+          import datetime, re
+          calendar = data["contributionsCollection"]["contributionCalendar"]
+          snake = open("dist/snake.svg", encoding="utf-8").read()
+          os.remove("dist/snake.svg")
+          weeks = [datetime.date.fromisoformat(w["firstDay"]) for w in calendar["weeks"]]
+          X0, Y0 = 60, 84
+          W, SH = X0 + 16 * len(weeks) + 24, Y0 + 112 + 46
+          snake = re.sub(r'<rect class="u[^>]*/>', "", snake)  # the progress bar under the grid
+          # Drop the bar's strip from the bottom of snk's viewBox and place the grid in the card.
+          root = re.match(r"<svg[^>]*>", snake).group(0)
+          vw = int(re.search(r'viewBox="-16 -32 (\d+) \d+"', root).group(1))
+          snake = snake.replace(root, '<svg x="%d" y="%d" viewBox="-16 -32 %d 168" width="%d" height="168">'
+                                % (X0 - 16, Y0 - 32, vw, vw), 1)
+          # Fade the snake from head to tail and give it the banner's glow.
+          snake = snake.replace("</svg>", "<style>.s{filter:drop-shadow(0 0 3px #BB86FC99)}"
+                                ".s0{fill:#E9D5FF}.s1{fill:#BB86FC}.s2{fill:#9D6CF0}.s3{fill:#7C4DDB}</style></svg>", 1)
+          dots = ["#1C1A2B", "#3B2A63", "#5B3FA0", "#8B5CF6", "#BB86FC"]
+          label = '<text x="%d" y="%d" font-family="%s" font-size="11" fill="#8B949E"%s>%s</text>'
+          body = ""
+          for i, day in enumerate(weeks):
+              # Label each month where it starts, skipping a first month too narrow to fit.
+              if (i == 0 and weeks[min(2, len(weeks) - 1)].month == day.month) or (i and weeks[i - 1].month != day.month):
+                  body += label % (X0 + 2 + 16 * i, Y0 - 10, font, "", day.strftime("%b"))
+          for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+              body += label % (X0 - 10, Y0 + 12 + 16 * row, font, ' text-anchor="end"', name)
+          foot = Y0 + 112 + 26
+          body += label % (X0 + 2, foot, font, "", "%d contributions in the last year" % calendar["totalContributions"])
+          x = W - 26 - 28 - 5 * 14
+          body += label % (x - 6, foot, font, ' text-anchor="end"', "Less")
+          for i, c in enumerate(dots):
+              body += '<rect x="%d" y="%d" width="10" height="10" rx="2" fill="%s"/>' % (x + 14 * i, foot - 9, c)
+          body += label % (x + 5 * 14 + 2, foot, font, "", "More")
+          open("dist/snake-card.svg", "w", encoding="utf-8").write(
+              '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" fill="none">'
+              '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
+              '<text x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>%s%s</svg>'
+              % (W, SH, W, SH, W - 1, SH - 1, font, body, snake))
           print(tiles, [(n, round(100 * s / total, 1)) for n, s in top])
           EOF
 

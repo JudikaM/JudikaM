@@ -7,7 +7,7 @@
   <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=341eokt"><img src="./assets/link-instagram.svg" alt="Instagram" align="absmiddle"/></a>
   <a href="mailto:judika.mrp@gmail.com"><img src="./assets/link-gmail.svg" alt="Gmail" align="absmiddle"/></a>
   <a href="https://judika.me/"><img src="./assets/link-portfolio.svg" alt="Portfolio" align="absmiddle"/></a>
-  <kbd><img src="https://hits.sh/github.com/JudikaM.svg?style=flat-square&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views" height="24"/></kbd>
+  <kbd><img src="https://hits.sh/github.com/JudikaM.svg?style=flat&label=views&extraCount=381&labelColor=0d1117&color=bb86fc" alt="Profile views" height="24"/></kbd>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

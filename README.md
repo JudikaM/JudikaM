@@ -45,7 +45,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 ## Tech Arsenal
 
 <p align="center">
-  <img width="98.5%" src="./assets/tech-arsenal.svg" alt="Tech Arsenal — Languages: Python, JavaScript, TypeScript, Solidity, PHP. Frontend: React, Tailwind, HTML, CSS, Vite. Backend: Node.js, Express, Laravel, FastAPI, Web3.py. DevOps & Data: Docker, PostgreSQL, MySQL, Git, GitHub. Security & Systems: Linux, Kali, Bash, Burp Suite, Wireshark."/>
+  <img width="98.5%" src="./assets/tech-arsenal.svg" alt="Tech Arsenal as tree ~/arsenal — security: Linux, Kali, Bash, Burp Suite, Wireshark; languages: Python, JavaScript, TypeScript, PHP, Solidity; web: React, Tailwind, Node.js, Express, Laravel; backend: FastAPI, Web3.py, Docker, PostgreSQL, MySQL."/>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

@@ -64,8 +64,8 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 ## GitHub Stats
 
 <p align="center">
-  <img width="58.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/stats.svg" alt="fastfetch in an Arch terminal: past-year contributions, commits, pull requests and merge rate, issues, active days, repositories, stars and a weekly activity sparkline"/>
-  <img width="39.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/languages.svg" alt="github-linguist in an Arch terminal: most used languages by share"/>
+  <img width="58.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/stats.svg" alt="fastfetch in a terminal: past-year contributions, commits, pull requests and merge rate, issues, active days, repositories, stars and a weekly activity sparkline"/>
+  <img width="39.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/languages.svg" alt="github-linguist in a terminal: most used languages by share"/>
 </p>
 
 <!-- ===== SNAKE ANIMATION ===== -->

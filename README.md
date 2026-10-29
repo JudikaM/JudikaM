@@ -64,22 +64,6 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
 ## GitHub Stats
 
 <p align="center">
-  <img width="58.5%" src="https://github-readme-stats.vercel.app/api?username=JudikaM&show_icons=true&rank_icon=github&card_width=495&icon_color=BB86FC&ring_color=BB86FC&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="stats"/>
-  <img width="39.5%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JudikaM&layout=compact&langs_count=8&card_width=326&hide_border=false&border_color=BB86FC40&border_radius=10&bg_color=0D1117&title_color=BB86FC&text_color=C9D1D9" alt="top languages"/>
-</p>
-
-<p align="center">
-  <img width="98.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/streak.svg" alt="streak"/>
-</p>
-
-<!-- ===== SNAKE ANIMATION ===== -->
-<p align="center">
-  <img width="98.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/snake-card.svg" alt="Contribution snake animation"/>
-</p>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
-
-<!-- ===== FOOTER ===== -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:bb86fc,100:121212&height=120&section=footer" alt="footer"/>
+  <img width="58.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/stats.svg" alt="GitHub activity: contributions, commits, pull requests, issues, stars and public repositories"/>
+  <img width="39.5%" src="https://raw.githubusercontent.com/JudikaM/JudikaM/output/languages.svg" alt="Most used languages"/>
 </p>

@@ -113,7 +113,7 @@
   <circle cx="28" cy="22" r="5.5" fill="#ff5f56"/>
   <circle cx="46" cy="22" r="5.5" fill="#ffbd2e"/>
   <circle cx="64" cy="22" r="5.5" fill="#27c93f"/>
-  <text x="440" y="26" text-anchor="middle" font-size="12" fill="#6e7681">judika@m: ~ — bash</text>
+  <text x="440" y="26" text-anchor="middle" font-size="12" fill="#9DA7B3">judika@m: ~ — bash</text>
   <line x1="6" y1="37" x2="874" y2="37" stroke="#bb86fc" stroke-opacity="0.20"/>
 
   <!-- bash prompt, typed -->

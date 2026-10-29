@@ -22,10 +22,7 @@
 I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute Jakarta** focused on **building secure web applications**. That goal is what drew me to **cyber security**: I study how systems break so I can build ones that don't. I treat security as the foundation of an application, not a feature added at the end.
 
 <p align="center">
-  <img width="24%" src="./assets/about-focus.svg" alt="Focus: secure coding & web application security"/>
-  <img width="24%" src="./assets/about-exploring.svg" alt="Exploring: web pentesting with Burp Suite and the OWASP Top 10"/>
-  <img width="24%" src="./assets/about-open.svg" alt="Open to: internships, freelance & full-time work"/>
-  <a href="mailto:judika.mrp@gmail.com"><img width="24%" src="./assets/about-contact.svg" alt="Contact: judika.mrp@gmail.com"/></a>
+  <img width="25%" src="./assets/about-focus.svg" alt="Focus: secure coding & web application security"/><img width="25%" src="./assets/about-exploring.svg" alt="Exploring: web pentesting with Burp Suite and the OWASP Top 10"/><img width="25%" src="./assets/about-open.svg" alt="Open to: internships, freelance & full-time work"/><a href="mailto:judika.mrp@gmail.com"><img width="25%" src="./assets/about-contact.svg" alt="Contact: judika.mrp@gmail.com"/></a>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

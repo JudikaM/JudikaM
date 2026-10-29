@@ -49,8 +49,7 @@
 ## Education
 
 <p align="center">
-  <img width="49%" src="./assets/education-perbanas.svg" alt="Perbanas Institute Jakarta — B.Sc. Informatics Engineering, 2023 — Present. Focused on network security, secure programming, and software development in information technology."/>
-  <img width="49%" src="./assets/education-pbd.svg" alt="PBD Aviation Vocational High School, Medan — Vocational, Electrical Avionic, 2020 — 2023. Specialized in aircraft electrical systems and avionics, building a strong technical foundation."/>
+  <img width="98.5%" src="./assets/education.svg" alt="Perbanas Institute Jakarta — B.Sc. Informatics Engineering, 2023 — present. Focused on network security, secure programming, and software development in information technology. PBD Aviation Vocational High School, Medan — Vocational — Electrical Avionic, 2020 — 2023. Specialized in aircraft electrical systems and avionics, building a strong technical foundation."/>
 </p>
 
 <img src="./assets/divider.svg" width="100%" alt=""/>

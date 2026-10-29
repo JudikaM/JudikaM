@@ -14,7 +14,7 @@
   <img src="https://hits.sh/github.com/JudikaM.svg?style=for-the-badge&label=Profile%20Views&extraCount=381&labelColor=1a1025&color=bb86fc" alt="Profile Views"/>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ===== ABOUT ===== -->
 ## About Me
@@ -28,7 +28,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <a href="mailto:judika.mrp@gmail.com"><img width="24%" src="./assets/about-contact.svg" alt="Contact: judika.mrp@gmail.com"/></a>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ===== PROJECTS ===== -->
 ## Featured Projects
@@ -39,7 +39,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <a href="https://github.com/JudikaM/lobbyquest"><img width="32.5%" src="./assets/project-lobbyquest.svg" alt="LobbyQuest — an open-source web app for planning game nights and hangouts with friends: create an agenda and vote on the best time."/></a>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ===== SKILLS ===== -->
 ## Tech Arsenal
@@ -48,7 +48,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <img width="98.5%" src="./assets/tech-arsenal.svg" alt="Tech Arsenal — Languages: Python, JavaScript, TypeScript, Solidity, PHP. Frontend: React, Tailwind, HTML, CSS, Vite. Backend: Node.js, Express, Laravel, FastAPI, Web3.py. DevOps & Data: Docker, PostgreSQL, MySQL, Git, GitHub. Security & Systems: Linux, Kali, Bash, Burp Suite, Wireshark."/>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ===== EDUCATION ===== -->
 ## Education
@@ -58,7 +58,7 @@ I'm a **7th-semester Informatics Engineering student** at **Perbanas Institute J
   <img width="49%" src="./assets/education-pbd.svg" alt="PBD Aviation Vocational High School, Medan — Vocational, Electrical Avionic, 2020 — 2023. Specialized in aircraft electrical systems and avionics, building a strong technical foundation."/>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:121212,50:bb86fc,100:121212&height=2" width="100%"/>
+<img src="./assets/divider.svg" width="100%" alt=""/>
 
 <!-- ===== STATS ===== -->
 ## GitHub Stats

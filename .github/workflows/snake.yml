@@ -64,17 +64,22 @@ jobs:
           tty = '<text x="%g" y="%g" font-family="' + mono + '" font-size="11.5"%s>%s</text>'
           prompt = '[<tspan fill="#BB86FC">judika@m</tspan> ~]$ '
 
-          def window(w, command, body):
+          # An SVG's @media queries match the size its <img> is drawn at, so on a phone
+          # (below `narrow` px) each card swaps its detailed output for a few large lines.
+          big = '<text x="%g" y="%g" font-family="' + mono + '" font-size="22"%s>%s</text>'
+
+          def window(w, command, shared, full, mini, narrow):
               return (
                   '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" fill="none">'
                   '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
                   '<path d="M0.5 30.5V10.5a10 10 0 0 1 10-10h%d a10 10 0 0 1 10 10v20Z" fill="#BB86FC" fill-opacity="0.06"/>'
                   '<path d="M1 30.5H%d" stroke="#BB86FC" stroke-opacity="0.18"/>'
                   '<circle cx="20" cy="16" r="5" fill="#ff5f56"/><circle cx="37" cy="16" r="5" fill="#ffbd2e"/>'
-                  '<circle cx="54" cy="16" r="5" fill="#27c93f"/>%s%s%s</svg>'
-              ) % (w, H, w, H, w - 1, H - 1, w - 21, w - 1,
+                  '<circle cx="54" cy="16" r="5" fill="#27c93f"/>%s<g class="full">%s%s%s</g><g class="mini">%s</g>'
+                  '<style>.mini{display:none}@media (max-width:%dpx){.full{display:none}.mini{display:inline}}</style></svg>'
+              ) % (w, H, w, H, w - 1, H - 1, w - 21, w - 1, shared,
                    tty % (w / 2, 20, ' text-anchor="middle" fill="#8B949E"', "judika@m: ~"),
-                   tty % (22, 54, ' fill="#C9D1D9"', prompt + command), body)
+                   tty % (22, 54, ' fill="#C9D1D9"', prompt + command), full, mini, narrow)
 
           # Activity: a fastfetch run, with the stats as its info lines and a weekly
           # sparkline drawn as bars.
@@ -92,23 +97,24 @@ jobs:
               ("Uptime", "%d active days" % sum(1 for _, n in days if n), ""),
               ("Packages", "%d repos" % data["repositories"]["totalCount"], "&#9733; %d" % stars),
           ]
-          body = ""
-          # The logo: a J lit up on a 7x7 patch of contribution cells, popping in row by row.
+          # The logo, shown in both layouts: a J lit up on a 7x7 patch of contribution
+          # cells, popping in row by row.
           logo = ["..#####", "....##.", "....##.", "....##.", "##..##.", "##..##.", ".####.."]
           shades = ["#E9D5FF", "#DDBEFE", "#D2A8FF", "#C697FD", "#BB86FC", "#A774F8", "#8B5CF6"]
           # The glow is a soft halo behind each lit cell: Chrome hides cells that pop in under a filter.
-          body += ("<style>@keyframes pop{from{opacity:0;transform:scale(.3)}}"
-                   ".j{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.3,1.6,.5,1) both}</style>")
+          shared = ("<style>@keyframes pop{from{opacity:0;transform:scale(.3)}}"
+                    ".j{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.3,1.6,.5,1) both}</style>")
           for r, (row, shade) in enumerate(zip(logo, shades)):
               for c, cell in enumerate(row):
                   x, y = 26 + 14 * c, 86 + 14 * r
                   if cell == "#":
                       delay = 0.2 + 0.07 * (r + c)
-                      body += ('<rect class="j" x="%d" y="%d" width="16" height="16" rx="5" fill="#BB86FC" fill-opacity="0.16" style="animation-delay:%.2fs"/>'
-                               '<rect class="j" x="%d" y="%d" width="12" height="12" rx="3" fill="%s" style="animation-delay:%.2fs"/>'
-                               % (x - 2, y - 2, delay, x, y, shade, delay))
+                      shared += ('<rect class="j" x="%d" y="%d" width="16" height="16" rx="5" fill="#BB86FC" fill-opacity="0.16" style="animation-delay:%.2fs"/>'
+                                 '<rect class="j" x="%d" y="%d" width="12" height="12" rx="3" fill="%s" style="animation-delay:%.2fs"/>'
+                                 % (x - 2, y - 2, delay, x, y, shade, delay))
                   else:
-                      body += '<rect x="%d" y="%d" width="12" height="12" rx="3" fill="#1C1A2B"/>' % (x, y)
+                      shared += '<rect x="%d" y="%d" width="12" height="12" rx="3" fill="#1C1A2B"/>' % (x, y)
+          body = ""
           X, V = 150, 222
           body += tty % (X, 78, ' font-weight="700" fill="#BB86FC"', 'judika<tspan fill="#C9D1D9">@</tspan>github')
           body += '<path d="M%d 84.5H%d" stroke="#8B949E" stroke-opacity="0.5" stroke-dasharray="4 2"/>' % (X, X + 98)
@@ -130,7 +136,13 @@ jobs:
                   V + step * i, yy + 1 - h, step - 2, h, "" if n else ' fill-opacity="0.3"')
           for i, c in enumerate(["#1C1A2B", "#3B2A63", "#5B3FA0", "#8B5CF6", "#BB86FC", "#D2A8FF", "#E9D5FF", "#F0F6FC"]):
               body += '<rect x="%d" y="%d" width="22" height="11" fill="%s"/>' % (X + 22 * i, yy + 11, c)
-          open("dist/stats.svg", "w", encoding="utf-8").write(window(495, "fastfetch", body))
+          mini = ""
+          for i, (value, label) in enumerate([(calendar["totalContributions"], "contributions"),
+                                              (col["totalCommitContributions"], "commits"),
+                                              (prs, "PRs" + (" &#183; %d%% merged" % round(100 * merged / prs) if prs else "")),
+                                              (sum(1 for _, n in days if n), "active days")]):
+              mini += big % (X, 82 + 38 * i, ' fill="#8B949E"', '<tspan font-weight="700" fill="#F0F6FC">%d</tspan> %s' % (value, label))
+          open("dist/stats.svg", "w", encoding="utf-8").write(window(495, "fastfetch", shared, body, mini, 340))
 
           # Languages: github-linguist's output, share and name, with a block bar scaled
           # to the largest. Blade templates and build files would crowd out the real languages.
@@ -154,7 +166,13 @@ jobs:
           # A fresh prompt with the banner's blinking cursor.
           body += tty % (22, 82 + 21 * len(top) + 8, ' fill="#C9D1D9"', prompt + '<tspan class="cur" fill="#BB86FC">&#9608;</tspan>')
           body += "<style>@keyframes blink{0%,49%{fill-opacity:1}50%,100%{fill-opacity:0}}.cur{animation:blink 1.1s infinite}</style>"
-          open("dist/languages.svg", "w", encoding="utf-8").write(window(334, "github-linguist", body))
+          mini = ""
+          for i, (name, size) in enumerate(top[:4]):
+              y = 80 + 38 * i
+              mini += '<rect x="24" y="%d" width="16" height="16" rx="3" fill="%s"/>' % (y - 15, colors[name])
+              mini += big % (52, y, ' fill="#F0F6FC"', escape(name))
+              mini += big % (310, y, ' text-anchor="end" fill="#8B949E"', "%.0f%%" % (100 * size / total))
+          open("dist/languages.svg", "w", encoding="utf-8").write(window(334, "github-linguist", "", body, mini, 230))
 
           # Snake: frame the snk grid with GitHub-style month and weekday labels, a live
           # total and a legend. Grid cell (col, row) sits at (16 col + 2, 16 row + 2) in snk's
@@ -175,8 +193,10 @@ jobs:
           snake = snake.replace("</svg>", "<style>.s{filter:drop-shadow(0 0 3px #BB86FC99)}"
                                 ".s0{fill:#E9D5FF}.s1{fill:#BB86FC}.s2{fill:#9D6CF0}.s3{fill:#7C4DDB}</style></svg>", 1)
           dots = ["#1C1A2B", "#3B2A63", "#5B3FA0", "#8B5CF6", "#BB86FC"]
-          label = '<text x="%d" y="%d" font-family="%s" font-size="11" fill="#8B949E"%s>%s</text>'
-          body = ""
+          label = '<text class="lb" x="%d" y="%d" font-family="%s" font-size="11" fill="#8B949E"%s>%s</text>'
+          # On a phone the card draws at about 0.4x, so labels grow and the legend goes.
+          body = ("<style>@media (max-width:600px){.lb{font-size:22px}.tt{font-size:34px}"
+                  ".lg{display:none}}</style>")
           for i, day in enumerate(weeks):
               # Label each month where it starts, skipping a first month too narrow to fit.
               if (i == 0 and weeks[min(2, len(weeks) - 1)].month == day.month) or (i and weeks[i - 1].month != day.month):
@@ -186,14 +206,14 @@ jobs:
           foot = Y0 + 112 + 26
           body += label % (X0 + 2, foot, font, "", "%d contributions in the last year" % calendar["totalContributions"])
           x = W - 26 - 28 - 5 * 14
-          body += label % (x - 6, foot, font, ' text-anchor="end"', "Less")
+          body += '<g class="lg">' + label % (x - 6, foot, font, ' text-anchor="end"', "Less")
           for i, c in enumerate(dots):
               body += '<rect x="%d" y="%d" width="10" height="10" rx="2" fill="%s"/>' % (x + 14 * i, foot - 9, c)
-          body += label % (x + 5 * 14 + 2, foot, font, "", "More")
+          body += label % (x + 5 * 14 + 2, foot, font, "", "More") + "</g>"
           open("dist/snake-card.svg", "w", encoding="utf-8").write(
               '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" fill="none">'
               '<rect x="0.5" y="0.5" width="%d" height="%d" rx="10" fill="#0D1117" stroke="#BB86FC" stroke-opacity="0.25"/>'
-              '<text x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>%s%s</svg>'
+              '<text class="tt" x="28" y="38" font-family="%s" font-size="18" font-weight="600" fill="#BB86FC">Contribution Snake</text>%s%s</svg>'
               % (W, SH, W, SH, W - 1, SH - 1, font, body, snake))
           print(info, weekly, [(n, round(100 * s / total, 1)) for n, s in top])
           EOF

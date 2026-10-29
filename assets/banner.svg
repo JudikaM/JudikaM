@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 262" width="880" height="262" font-family="'Courier New', Courier, monospace">
   <title>Judika Marpaung — Cyber Security &amp; Web3</title>
-  <desc>Animated Kali terminal banner. Typed prompt reveals the name JUDIKA MARPAUNG, roles, and the motto "Security isn't a feature — it's the foundation." The binary rain columns encode JUDIKA@M in ASCII.</desc>
+  <desc>Animated terminal banner. A typed whoami reveals the name JUDIKA MARPAUNG, roles, and the motto "Security isn't a feature — it's the foundation." The binary rain columns encode JUDIKA@M in ASCII.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d1117"/>
@@ -24,10 +24,9 @@
       <stop offset="1" stop-color="#100c1b" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="bodyClip"><rect x="12" y="49" width="856" height="202" rx="2"/></clipPath>
-    <clipPath id="clipL1"><rect class="typeL1" x="28" y="68"  width="175" height="20"/></clipPath>
-    <clipPath id="clipL2"><rect class="typeL2" x="28" y="92"  width="120" height="20"/></clipPath>
-    <clipPath id="clipNm"><rect class="typeNm" x="28" y="118" width="338" height="38"/></clipPath>
-    <clipPath id="clipQt"><rect class="typeQt" x="28" y="218" width="474" height="22"/></clipPath>
+    <clipPath id="clipL1"><rect class="typeL1" x="28" y="68"  width="196" height="20"/></clipPath>
+    <clipPath id="clipNm"><rect class="typeNm" x="28" y="104" width="338" height="38"/></clipPath>
+    <clipPath id="clipQt"><rect class="typeQt" x="28" y="204" width="474" height="22"/></clipPath>
   </defs>
 
   <style>
@@ -37,9 +36,8 @@
     @media (max-width:520px){
       .role{font-size:21px}
     }
-    .typeL1,.typeL2,.typeNm,.typeQt{transform-box:fill-box;transform-origin:left center}
-    .typeL1{animation:grow .55s steps(17) .2s both}
-    .typeL2{animation:grow .4s steps(8) .95s both}
+    .typeL1,.typeNm,.typeQt{transform-box:fill-box;transform-origin:left center}
+    .typeL1{animation:grow .65s steps(20) .2s both}
     .typeNm{animation:grow .85s steps(15) 1.55s both}
     .typeQt{animation:grow 1s steps(49) 3.35s both}
     .f1{animation:fade .35s 2.6s both}
@@ -56,12 +54,10 @@
     /* A caret rides the edge of each line while it types. Carets and glitch layers are
        decoration, so their resting state is hidden and the static frame is unchanged. */
     .caret{opacity:0}
-    .c1{animation:ride1 .55s steps(17) .2s}
-    .c2{animation:ride2 .4s steps(8) .95s}
+    .c1{animation:ride1 .65s steps(20) .2s}
     .c3{animation:ride3 .85s steps(15) 1.55s}
     .c4{animation:ride4 1s steps(49) 3.35s}
-    @keyframes ride1{from{opacity:1;transform:translateX(0)}to{opacity:1;transform:translateX(175px)}}
-    @keyframes ride2{from{opacity:1;transform:translateX(0)}to{opacity:1;transform:translateX(120px)}}
+    @keyframes ride1{from{opacity:1;transform:translateX(0)}to{opacity:1;transform:translateX(196px)}}
     @keyframes ride3{from{opacity:1;transform:translateX(0)}to{opacity:1;transform:translateX(338px)}}
     @keyframes ride4{from{opacity:1;transform:translateX(0)}to{opacity:1;transform:translateX(474px)}}
     /* Every 7s the name glitches for a moment: cyan and magenta copies split off it. */
@@ -117,43 +113,37 @@
   <circle cx="34" cy="30" r="6" fill="#ff5f56"/>
   <circle cx="56" cy="30" r="6" fill="#ffbd2e"/>
   <circle cx="78" cy="30" r="6" fill="#27c93f"/>
-  <text x="440" y="35" text-anchor="middle" font-size="13" fill="#6e7681">judika@m: ~ — zsh</text>
+  <text x="440" y="35" text-anchor="middle" font-size="13" fill="#6e7681">judika@m: ~ — bash</text>
   <line x1="6" y1="49" x2="874" y2="49" stroke="#bb86fc" stroke-opacity="0.20"/>
 
-  <!-- Kali prompt line 1 (typed) -->
+  <!-- bash prompt, typed -->
   <g clip-path="url(#clipL1)" font-size="16">
-    <text x="30" y="82"><tspan fill="#a371f7">┌──(</tspan><tspan fill="#7ee787" font-weight="bold">judika@m</tspan><tspan fill="#a371f7">)-[</tspan><tspan fill="#c9d1d9">~</tspan><tspan fill="#a371f7">]</tspan></text>
-  </g>
-
-  <!-- Kali prompt line 2 + command (typed) -->
-  <g clip-path="url(#clipL2)" font-size="16">
-    <text x="30" y="106"><tspan fill="#a371f7">└─$</tspan><tspan fill="#e6edf3"> I am</tspan></text>
+    <text x="30" y="82"><tspan fill="#c9d1d9">[</tspan><tspan fill="#bb86fc" font-weight="bold">judika@m</tspan><tspan fill="#c9d1d9"> ~]$</tspan><tspan fill="#e6edf3"> whoami</tspan></text>
   </g>
 
   <!-- output: name (typed, glow; textLength pins width across font fallbacks) -->
   <g clip-path="url(#clipNm)">
-    <text x="30" y="150" font-size="34" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
-    <text class="gl gl1" x="30" y="150" font-size="34" font-weight="bold" fill="#22d3ee" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
-    <text class="gl gl2" x="30" y="150" font-size="34" font-weight="bold" fill="#f472b6" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
+    <text x="30" y="136" font-size="34" font-weight="bold" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
+    <text class="gl gl1" x="30" y="136" font-size="34" font-weight="bold" fill="#22d3ee" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
+    <text class="gl gl2" x="30" y="136" font-size="34" font-weight="bold" fill="#f472b6" letter-spacing="2" textLength="334" lengthAdjust="spacingAndGlyphs">JUDIKA MARPAUNG</text>
   </g>
 
   <!-- output: roles (appear like terminal output) -->
-  <text class="role f1" x="30" y="182" font-size="16"><tspan fill="#7ee787" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Informatics Engineering Student</tspan></text>
-  <text class="role f2" x="30" y="208" font-size="16"><tspan fill="#7ee787" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Cyber Security Enthusiast</tspan></text>
+  <text class="role f1" x="30" y="168" font-size="16"><tspan fill="#bb86fc" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Informatics Engineering Student</tspan></text>
+  <text class="role f2" x="30" y="194" font-size="16"><tspan fill="#bb86fc" font-weight="bold">[+]</tspan><tspan fill="#c9d1d9"> Cyber Security Enthusiast</tspan></text>
 
   <!-- output: motto, typed as a shell comment -->
   <g clip-path="url(#clipQt)">
-    <text x="30" y="234" font-size="16" fill="#8b949e" textLength="470" lengthAdjust="spacingAndGlyphs"># Security isn't a feature — it's the foundation.</text>
+    <text x="30" y="220" font-size="16" fill="#8b949e" textLength="470" lengthAdjust="spacingAndGlyphs"># Security isn't a feature — it's the foundation.</text>
   </g>
 
   <!-- carets that ride each line while it types -->
   <rect class="caret c1" x="30" y="69" width="9" height="17" fill="#bb86fc"/>
-  <rect class="caret c2" x="30" y="93" width="9" height="17" fill="#bb86fc"/>
-  <rect class="caret c3" x="30" y="122" width="14" height="32" fill="#bb86fc"/>
-  <rect class="caret c4" x="30" y="220" width="10" height="18" fill="#bb86fc"/>
+  <rect class="caret c3" x="30" y="108" width="14" height="32" fill="#bb86fc"/>
+  <rect class="caret c4" x="30" y="206" width="10" height="18" fill="#bb86fc"/>
 
   <!-- blinking cursor at the end of the last output line -->
-  <rect class="cursor" x="504" y="220" width="10" height="18" fill="#bb86fc"/>
+  <rect class="cursor" x="504" y="206" width="10" height="18" fill="#bb86fc"/>
 
   <!-- scanline overlay -->
   <g class="scan" clip-path="url(#bodyClip)" fill="#bb86fc" opacity="0.06">
